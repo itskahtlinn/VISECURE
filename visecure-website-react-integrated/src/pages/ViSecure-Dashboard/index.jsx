@@ -3,6 +3,10 @@ import "./index.scss";
 import { Link } from 'react-router-dom';
 import ViSecureIcon from "../../assets/images/visecure-icon.png";
 import Settings from "../../assets/images/settings.png";
+import Search from "../../assets/images/search.png";
+import DashboardPic from "../../assets/images/dashboard.png";
+import Reports from "../../assets/images/reports.png";
+import Logout from "../../assets/images/logout.png";
 
 const Dashboard = () => {
     useEffect(() => {
@@ -11,9 +15,8 @@ const Dashboard = () => {
       
     return(
         <div className="dashboardMain">
-      
-        {/*<header>
-          <Link to = "/main" className="icon">
+          
+          {/*<Link to = "/main" className="icon">
             <img src={ViSecureIcon} alt="Visecure Icon" />
           </Link>
           <a href="#" className="logo">
@@ -33,9 +36,23 @@ const Dashboard = () => {
         </Link>
           <a href="#">
             <img src={Settings} alt="Settings Icon" />
-          </a>
-        </header> */}
-
+          </a>*/} //Header
+          <div className="Header">
+            <div className="SideNav">
+                <div className="CompanyLogo">
+                    <img src={ViSecureIcon} class="icon"/>
+                    <h3>ViSecure</h3>
+                </div>
+                <ul>
+                    <li><img src={Search}/><p>Search</p></li>
+                    <li><img src={DashboardPic}/><p>Dashboard</p></li>
+                    <li><img src={Reports}/><p>Reports</p></li>
+                </ul>
+                <ul className="LogOut">
+                    <li><img src={Logout}/><p>Log Out</p></li>
+                </ul>
+            </div>
+        </div>
         <div className="DashboardContent">
           <div className="container">
             <h1>Welcome to Dashboard!</h1>

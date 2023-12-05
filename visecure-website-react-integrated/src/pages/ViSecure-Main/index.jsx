@@ -58,7 +58,7 @@ const Main = () => {
           <a href="#" className= "logo">
             ViSecure
           </a>
-          <Link to = "company-partner"  className="Company">
+          <Link to = "/company-partner"  className="Company">
             Company Partner
           </Link>
           <Link to = "/about" className="AboutUs">

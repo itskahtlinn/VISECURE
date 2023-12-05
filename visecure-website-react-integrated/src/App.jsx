@@ -3,7 +3,6 @@ import AboutUs from "./pages/ViSecure-AboutUs";
 import Admin from "./pages/ViSecure-Admin";
 import CompanyPartner from "./pages/ViSecure-CmpnyPrtnr";
 import Complete from "./pages/ViSecure-Complete";
-import Done from "./pages/ViSecure-Done";
 import Form from "./pages/ViSecure-Form";
 import Main from "./pages/ViSecure-Main";
 import Visitor from "./pages/ViSecure-Visitor";
@@ -17,8 +16,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/company-partner" element={<CompanyPartner />} />
-        <Route path="/complete" element={<Complete />} />
-        <Route path="/done" element={<Done />} />
+        <Route path="/complete" element={<Complete />} />      
         <Route path="/form" element={<Form />} />
         <Route path="/main" element={<Main />} />
         <Route path="/visitor" element={<Visitor />} />

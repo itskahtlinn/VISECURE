@@ -18,14 +18,12 @@ const Visitor = () => {
           ViSecure
         </a>
         <Link to = "/company-partner" className="Company">
-          Partner Company
+          Company Partner
         </Link>
         <Link to = "/about" className="AboutUs">
           About Us
         </Link>
-        <a href="#" className="FAQ">
-          FAQ's
-        </a>
+        
       </header>
       <main>
         <div className="GreetingForm">
