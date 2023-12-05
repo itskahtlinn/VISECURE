@@ -1,0 +1,72 @@
+.adminMain{
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #2C2C2C;
+    border-bottom: #fff 2.5px solid;
+    position: fixed;
+    top: 0; left: 0; right: 0; 
+    padding: 4px 2%;
+    align-items: center;
+    display: flex;
+    z-index: 1000;
+
+}
+
+.logo {
+    color: #fff;
+    font-size: 100%;
+    padding: 10px;
+    text-decoration: none;
+    
+}
+
+.icon img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+
+#container1 {
+    display: flex;
+    align-items: center;
+}
+
+#container1 img {
+    width: 150vh;
+    height: 100vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 85px;
+}
+
+
+h3 {
+    margin-bottom: 10px;
+}
+
+
+.icon2 img {
+    max-width: 100px;
+    max-height: 95px;
+    margin-bottom: 20px;
+}
+}
