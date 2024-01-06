@@ -15,28 +15,6 @@ const Dashboard = () => {
       
     return(
         <div className="dashboardMain">
-          
-          {/*<Link to = "/main" className="icon">
-            <img src={ViSecureIcon} alt="Visecure Icon" />
-          </Link>
-          <a href="#" className="logo">
-            ViSecure
-          </a>
-          <a href="#" className="Dashboard">
-            Dashboard
-          </a>
-          <a href="#" className="Visitor">
-            Visitor
-          </a>
-         <Link to = "/company-partner" className="CompanyPartner">
-          Company Partner
-         </Link>
-         <Link to = "/about" className="AboutUs">
-          About Us
-        </Link>
-          <a href="#">
-            <img src={Settings} alt="Settings Icon" />
-          </a>*/} //Header
           <div className="Header">
             <div className="SideNav">
                 <div className="CompanyLogo">

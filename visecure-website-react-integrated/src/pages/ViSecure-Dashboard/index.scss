@@ -12,6 +12,11 @@ html {
     scroll-behavior: smooth;
 }
 
+.full-bleed{
+    box-shadow: 0 0 0 100vmax #808080;
+    clip-path: inset(0 -100vmax);
+}
+
 .SideNav{
     width: 100px;
     height: 100%;
@@ -23,7 +28,7 @@ html {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 
@@ -32,16 +37,16 @@ html {
     align-items: center;
     width: 100%;
     font-size: 20px;
-    padding: 20px 10px;
+    padding: 10px 10px;
     border-bottom: 1px solid white;
     overflow: hidden;
+
+    .icon{
+        width: 70px;
+        height: 70px;
+    }
 }
 
-
-.icon{
-    width: 70px;
-    height: 70px;
-}
 
 .CompanyLogo h3{
     color: white;
@@ -77,11 +82,11 @@ ul li p{
 }
 
 .LogOut{
-    margin-top: 250px;
+    margin-top: auto;
 }
 
 .SideNav:hover{
-    width: 275px;
+    width: 300px;
 }
 
 .SideNav:hover .CompanyLogo{
@@ -92,9 +97,9 @@ ul li p{
     display: block;
 }
 
-/* ul li:hover{
+ul li:hover{
     background-color: #808080;
-} */
+} 
 
 body {
     margin: 0;
@@ -110,6 +115,7 @@ body {
     left: 80px;
     transition: all 0.5s;
     width: calc(100% - 80px);
+    overflow-x: hidden;
 }
 
 h1{
