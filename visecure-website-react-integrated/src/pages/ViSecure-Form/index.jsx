@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import "./index.scss";
 import { Link } from 'react-router-dom';
+import "./index.scss";
 
 const Form = () => {
   const containerRef = useRef(null);
@@ -8,22 +8,14 @@ const Form = () => {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://c2hcs013.caspio.com/dp/3b75d000c5e9a59a4dc949e89974/emb';
+    script.src = 'https://c2hcz115.caspio.com/dp/A427D000c5e9a59a4dc949e89974/emb';
     script.async = true;
 
     scriptRef.current = script;
 
-    // Append the script immediately
     containerRef.current.appendChild(script);
 
-    // Set up the onload callback
-    script.onload = () => {
-      console.log('Script loaded');
-      // Any additional actions can be performed here if needed
-    };
-
     return () => {
-      console.log('Component unmounted');
       if (scriptRef.current && scriptRef.current.parentNode) {
         scriptRef.current.parentNode.removeChild(scriptRef.current);
       }
