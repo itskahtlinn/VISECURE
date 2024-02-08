@@ -9,15 +9,13 @@ const Admin = () => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        document.title = 'Visecure Website';
+        document.title = 'Admin';
         const script = document.createElement('script');
         script.src = 'https://c3dcq066.caspio.com/dp/0AF5D00087e7be35a0f14936ba9a/emb';
         script.type = 'text/javascript';
         script.async = true;
     
         containerRef.current.appendChild(script);
-    
-        document.title = 'Visecure Website';
     
         return () => {
           if (script.parentNode) {

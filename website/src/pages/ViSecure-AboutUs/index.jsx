@@ -7,6 +7,7 @@ import AboutUs2 from "../../assets/images/AboutUs-2.png";
 import Email from "../../assets/images/email.png";
 import Call from "../../assets/images/call.png";
 
+
 const AboutUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderContentRef = useRef(null);
@@ -18,6 +19,7 @@ const AboutUs = () => {
   };
 
   useEffect(() => {
+    document.title = 'About Us';
     inputRadiosRef.current.forEach((radio, index) => {
       radio.addEventListener('change', () => {
         setCurrentIndex(index);
@@ -57,6 +59,7 @@ const AboutUs = () => {
         <Link to = "/about" className="AboutUs">
           About Us
         </Link>
+
       </header>
 
       <section className="AboutUsIntroContainer">

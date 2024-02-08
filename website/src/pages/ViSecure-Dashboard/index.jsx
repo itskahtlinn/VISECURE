@@ -43,7 +43,7 @@ const Dashboard = () => {
   const scriptRef = useRef(null);
 
   useEffect(() => {
-    document.title = 'Visecure Website';
+    document.title = 'Dashboard';
 
     const hasVisited = sessionStorage.getItem('hasVisited');
   

@@ -6,7 +6,7 @@ import ViSecureIcon from "../../assets/images/visecure-icon.png";
 const Complete = () => {
     
     useEffect(() => {
-        document.title = 'Visecure Website';
+        document.title = 'Complete Form';
       }, []);
 
     return(

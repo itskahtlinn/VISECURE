@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Main = () => {
   useEffect(() => {
-    document.title = 'Visecure Website';
+    document.title = 'Main';
 
     const showScrollDown = () => {
       const scrollDownElement = document.getElementById('scroll-down');

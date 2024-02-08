@@ -7,10 +7,11 @@ const Form = () => {
   const scriptRef = useRef(null);
 
   useEffect(() => {
+    document.title = 'Form';
     const script = document.createElement('script');
     script.src = 'https://c2hcz115.caspio.com/dp/A427D000c5e9a59a4dc949e89974/emb';
     script.async = true;
-
+    
     scriptRef.current = script;
 
     containerRef.current.appendChild(script);

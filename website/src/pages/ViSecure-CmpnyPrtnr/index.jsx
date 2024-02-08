@@ -8,7 +8,7 @@ import SMLLogo from "../../assets/images/smoothMovesLogo.png";
 const CompanyPartner = () => {
 
     useEffect(() => {
-        document.title = 'Visecure Website';
+        document.title = 'Company Partners';
        
         const missionTextContainer = document.querySelector(".missionTextContainer");
         const visionTextContainer = document.querySelector(".visionTextContainer");

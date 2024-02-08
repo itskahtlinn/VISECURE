@@ -14,41 +14,57 @@ html {
 
 header {
     background-color: #2C2C2C;
-    border-bottom: #fff 2.5px solid;
-    position: fixed;
+    border-bottom: #fff 3px solid;
+    position: sticky;
+    height: 8dvh;
     top: 0; left: 0; right: 0; 
-    padding: 4px 2%;
+    padding: 10px 1.75rem;
     align-items: center;
     display: flex;
+    justify-content: space-between;
     z-index: 1000;
-}
+    font-family: 'Poppins';
 
-header .AboutUs{
-    color: white;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    margin-right: 10px;
-    margin-left: auto;
-}
+    .AboutUs{
+        color: white;
+        text-decoration: none;
+        font-family: 'Poppins';
+        font-size: 1rem;
+        margin-right: 10px;
+        margin-left: 20px;
+        transition: text-decoration 0.3s ease; 
 
-header .partnerCompany{
-    color: white;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    margin-right: 20px;
-    margin-left: 1100px;
-}
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
-.logo {
-    color: #fff;
-    font-size: 100%;
-    padding: 10px;
-    text-decoration: none;
-}
+    .partnerCompany{
+        color: white;
+        text-decoration: none;
+        font-family: 'Poppins';
+        font-size: 1rem;
+        margin-right: 20px;
+        margin-left: auto;
+        transition: text-decoration 0.3s ease; 
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
-.icon img {
-    max-width: 35px;
-    max-height: 35px;
+    .logo {
+        color: #fff;
+        font-size: 1.25rem;
+        font-family: 'Poppins';
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    .icon img {
+        max-width: 3.5rem;
+        max-height: 3.5rem;
+    }
 }
 
 

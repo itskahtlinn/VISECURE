@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Visitor = () => {
     useEffect(() => {
-        document.title = 'Visecure Website';
+        document.title = 'Visitor';
       }, []);
       
     return(

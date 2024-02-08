@@ -23,7 +23,7 @@ header {
     justify-content: space-between;
     z-index: 1000;
     font-family: 'Poppins';
-    letter-spacing: 1rem;
+    letter-spacing: 1;
 
     .logo {
         color: #fff;
@@ -46,7 +46,7 @@ header {
     align-items: center;
     
     img{
-        width: 50dvw;
+        width: 150dvw;
         height: 100dvh;
     }
 }
