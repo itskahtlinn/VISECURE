@@ -1,0 +1,169 @@
+.mainContainer
+{
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #2C2C2C;
+    border-bottom: #fff 3px solid;
+    position: sticky;
+    height: 8dvh;
+    top: 0; left: 0; right: 0; 
+    padding: 10px 1.75rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    font-family: 'Poppins';
+
+    .AboutUs{
+        color: white;
+        text-decoration: none;
+        font-family: 'Poppins';
+        font-size: 1rem;
+        margin-right: 10px;
+        margin-left: 20px;
+        transition: text-decoration 0.3s ease; 
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .Company{
+        color: white;
+        text-decoration: none;
+        font-family: 'Poppins';
+        font-size: 1rem;
+        margin-right: 20px;
+        margin-left: auto;
+        transition: text-decoration 0.3s ease; 
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 1.25rem;
+        font-family: 'Poppins';
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    .icon img {
+        max-width: 3.5rem;
+        max-height: 3.5rem;
+    }
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    background: url(../../assets/images/Visecure1.png);
+    background-size: cover;
+    justify-content: center;
+    animation: home 5s steps(1) infinite;
+}
+
+@keyframes home {
+    0% {
+        background: url(../../assets/images/Visecure1.png);
+    }
+    25% {
+        background: url(../../assets/images/Visecure2.png);
+    }
+    35% {
+        
+    }
+   
+}
+
+.home .content h1 {
+    font-size: 90px;
+    line-height: 1;
+    color: #fff;
+    padding-top: 275px;
+    word-spacing: 2px;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.scrolldown {
+    position: absolute;
+    bottom: 20px;
+    color:aliceblue;
+    font-size: 18px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container1 img {
+    width: 150vh;
+    height: 100vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+h3, p {
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0d7ad4;
+}
+
+.icon2 img {
+    max-width: 100px;
+    max-height: 95px;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    text-align: center; 
+    margin-top: auto;
+    background-color: #081b29; 
+    color: #fff; 
+    padding: 20px;
+    font-size: 15px;
+}
+}

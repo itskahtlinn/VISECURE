@@ -45,7 +45,7 @@ const AboutUs = () => {
   }, [currentIndex, inputRadiosRef]);
   
     return(
-     <div className='aboutUsMain'>
+    <div className='aboutUsMain'>
       <header>
         <Link to = "/main" className="icon">
             <img src= {ViSecureIcon} alt="ViSecure Icon" />
@@ -91,7 +91,7 @@ const AboutUs = () => {
           you join a community of organizations that prioritize safety,
           efficiency, and professionalism while nurturing connections through every interaction.
         </p>
-        <p style={{ marginTop: '10px' }}>
+        <p>
           We look forward to assisting you in transforming the way you manage visitors,
           all while creating secure and engaging user interactions.
           Join us in creating a safer, paperless, and more efficient visitor experience.
@@ -157,8 +157,8 @@ const AboutUs = () => {
                 <img src={Call}/>
             </div>
             <div className="ContactUsDetails">
-                <p> crimsonfalcons@gmail.com </p> 
-                <p> 0916-584-5961 </p>
+                <p className="ContactEmail"> crimsonfalcons@gmail.com </p> 
+                <p className="ContactNumber"> 0916-584-5961 </p>
             </div>
         </div>
       </footer>
