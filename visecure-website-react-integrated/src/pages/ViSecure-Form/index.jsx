@@ -1,26 +1,39 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import "./index.scss";
+import './index.scss';
 
 const Form = () => {
   const containerRef = useRef(null);
   const scriptRef = useRef(null);
 
   useEffect(() => {
+    console.log('Component is mounting.');
+
     const script = document.createElement('script');
-    script.src = 'https://c2hcz115.caspio.com/dp/A427D000c5e9a59a4dc949e89974/emb';
+    script.src =
+    "https://c8ebv905.caspio.com/dp/5E49D000c5e9a59a4dc949e89974/emb";
     script.async = true;
 
-    scriptRef.current = script;
+    script.onload = () => {
+      console.log('Caspio script loaded successfully.');
+    };
 
+    script.onerror = () => {
+      console.error('Failed to load Caspio script.');
+    };
+
+    scriptRef.current = script;
+    containerRef.current.innerHTML = ''; 
     containerRef.current.appendChild(script);
 
     return () => {
+      console.log('Component is unmounting.');
+
       if (scriptRef.current && scriptRef.current.parentNode) {
         scriptRef.current.parentNode.removeChild(scriptRef.current);
       }
     };
-  }, []);
+  }, []); 
 
   return (
     <div className="formMain">
@@ -35,6 +48,6 @@ const Form = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Form;
