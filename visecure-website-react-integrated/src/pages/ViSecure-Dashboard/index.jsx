@@ -3,7 +3,6 @@ import ViSecureIcon from "../../assets/images/visecure-icon.png";
 import VisitsTodayIcon from "../../assets/images/visitsToday.png";
 import TotalVisitorsIcon from "../../assets/images/totalVisitors.png";
 import Search from "../../assets/images/search.png";
-import DashboardPic from "../../assets/images/dashboard.png";
 import Reports from "../../assets/images/reports.png";
 import Logout from "../../assets/images/logout.png";
 import "./index.scss";
@@ -39,14 +38,15 @@ const Dashboard = () => {
   const [isSideNavHovered, setIsSideNavHovered] = useState(false);
   const [visited, setVisited] = useState(false);
   const [numberOfVisitors, setNumberOfVisitors] = useState(0);
-  const monthlyVisitsGraphRef = useRef(null);
-  const scriptRef = useRef(null);
+  const employeeListRef = useRef(null);
 
   useEffect(() => {
     document.title = 'Visecure Website';
 
     const hasVisited = sessionStorage.getItem('hasVisited');
-  
+
+    
+
     if (!hasVisited) {
       setNumberOfVisitors((prevCount) => prevCount + 1);
       sessionStorage.setItem('hasVisited', 'true');
@@ -54,15 +54,43 @@ const Dashboard = () => {
     } else {
       setVisited(true);
     }
-  
+
+    const monthlyVisitsScript = document.createElement('script');
+    monthlyVisitsScript.src = 'https://c8ebv905.caspio.com/dp/5E49D0007e51db2138bd45a6901d/emb';
+    monthlyVisitsScript.type = 'text/javascript';
+    monthlyVisitsScript.async = true;
+
+    const monthlyVisitsContainer = document.querySelector('.MonthlyVisitsGraph');
+    monthlyVisitsScript.onload = () => {
+      const scriptContainer = monthlyVisitsContainer.querySelector('iframe');
+    };
+
+    monthlyVisitsContainer.appendChild(monthlyVisitsScript);
+
     const script = document.createElement('script');
-    script.src = 'https://c2hcz115.caspio.com/dp/A427D0007e51db2138bd45a6901d/emb';
+    script.src = 'https://c8ebv905.caspio.com/dp/5e49d000be2e80cf0ea5431e961d/emb';
     script.type = 'text/javascript';
     script.async = true;
 
-    const parentContainer = monthlyVisitsGraphRef.current;
+    const weeklyVisitsScript = document.createElement('script');
+    weeklyVisitsScript.src = 'https://c8ebv905.caspio.com/dp/5e49d000d286656d68104e20857a/emb';
+    weeklyVisitsScript.type = 'text/javascript';
+    weeklyVisitsScript.async = true;
+
+    const weeklyVisitsContainer = document.querySelector('.WeeklyVisitsGraph');
+    weeklyVisitsScript.onload = () => {
+      const scriptContainer = weeklyVisitsContainer.querySelector('iframe');
+      if (scriptContainer) {
+        scriptContainer.style.width = '100%';
+        scriptContainer.style.height = '100%';
+      }
+    };
+
+    weeklyVisitsContainer.appendChild(weeklyVisitsScript);
+
+    const parentContainer = employeeListRef.current;
+
     script.onload = () => {
-      // Resize the script container to match its parent's size after the script loads
       const scriptContainer = parentContainer.querySelector('iframe');
       if (scriptContainer) {
         scriptContainer.style.width = '100%';
@@ -72,9 +100,18 @@ const Dashboard = () => {
 
     parentContainer.appendChild(script);
 
+
+    parentContainer.appendChild(script);
+
     return () => {
       if (script.parentNode) {
         script.parentNode.removeChild(script);
+      }
+      if (monthlyVisitsScript.parentNode) {
+        monthlyVisitsScript.parentNode.removeChild(monthlyVisitsScript);
+      }
+      if (weeklyVisitsScript.parentNode) {
+        weeklyVisitsScript.parentNode.removeChild(weeklyVisitsScript);
       }
     };
   }, []);
@@ -101,10 +138,6 @@ const Dashboard = () => {
               <p>Search</p>
             </li>
             <li>
-              <img src={DashboardPic} alt="Dashboard Icon" />
-              <p>Dashboard</p>
-            </li>
-            <li>
               <img src={Reports} alt="Reports Icon" />
               <p>Reports</p>
             </li>
@@ -118,7 +151,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className={`DashboardContent ${isSideNavHovered ? 'sideNavHovered' : ''}`}>
-        <h1>Welcome to Dashboard!</h1>
+        <h1>Welcome to the Dashboard!</h1>
         <div className="dashboard-container">
           <div className="small-container">
             <div className="TodayVisits">
@@ -137,9 +170,9 @@ const Dashboard = () => {
           <div className="DashboardInsights">
             <div className="Graphs">
               <div className="WeeklyVisitsGraph"></div>
-              <div ref={monthlyVisitsGraphRef} className="MonthlyVisitsGraph"></div>
+              <div className="MonthlyVisitsGraph"></div>
             </div>
-            <div className="EmployeeList">
+            <div className="EmployeeList" ref={employeeListRef}>
               <h2>Employee List</h2>
             </div>
           </div>

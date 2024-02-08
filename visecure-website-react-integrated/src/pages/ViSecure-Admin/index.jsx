@@ -11,7 +11,7 @@ const Admin = () => {
     useEffect(() => {
         document.title = 'Visecure Website';
         const script = document.createElement('script');
-        script.src = 'https://c3dcq066.caspio.com/dp/0AF5D00087e7be35a0f14936ba9a/emb';
+        script.src = 'https://c8ebv905.caspio.com/dp/5E49D00087e7be35a0f14936ba9a/emb';
         script.type = 'text/javascript';
         script.async = true;
     
@@ -41,11 +41,13 @@ const Admin = () => {
             <div id="container1">
             <img src={BG2}  alt="bg2" />
 
-            <div  ref={containerRef} className="content2">
-                <Link to ="/main"  className="icon2">
+            <div className="content2">
+              <div  ref={containerRef}  className='loginContainer'>
+                <div className="icon2">
                 <img src={ViSecureIcon}  alt="ViSecure Icon" />
-                </Link>
+                </div>
                 <h3>Hi, Admin!</h3>
+            </div>
             </div>
             </div>
         </section>   
