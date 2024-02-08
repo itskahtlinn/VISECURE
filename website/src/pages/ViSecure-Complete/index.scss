@@ -1,0 +1,98 @@
+.completeMain
+{
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #2C2C2C;
+    border-bottom: #fff 2.5px solid;
+    position: fixed;
+    top: 0; left: 0; right: 0; 
+    padding: 4px 2%;
+    align-items: center;
+    display: flex;
+    z-index: 1000;
+}
+
+header .AboutUs{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+header .partnerCompany{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 20px;
+    margin-left: 1100px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 100%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.icon img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+
+.container{
+    background-color: white;
+}
+
+.btnExit {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #007AFF;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #007AFF;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+.btnExit:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.CompleteForm{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)  scale(1.5); 
+    color: black;
+
+    h1{
+        margin-bottom: 20px;
+    }
+
+    p{
+        margin-bottom: 30px;
+    }
+}
+}

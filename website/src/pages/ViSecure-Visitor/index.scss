@@ -1,0 +1,146 @@
+.visitorMain
+{
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #2C2C2C;
+    border-bottom: #fff 3px solid;
+    position: sticky;
+    height: 8dvh;
+    top: 0; left: 0; right: 0; 
+    padding: 10px 1.75rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    font-family: 'Poppins';
+
+    .AboutUs{
+        color: white;
+        text-decoration: none;
+        font-family: 'Poppins';
+        font-size: 1.25rem;
+        margin-right: 10px;
+        margin-left: 20px;
+        transition: text-decoration 0.3s ease; 
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .Company{
+        color: white;
+        text-decoration: none;
+        font-family: 'Poppins';
+        font-size: 1.25rem;
+        margin-right: 20px;
+        margin-left: auto;
+        transition: text-decoration 0.3s ease; 
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 1.25rem;
+        font-family: 'Poppins';
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    .icon img {
+        max-width: 3.5rem;
+        max-height: 3.5rem;
+    }
+}
+
+header .FAQ{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 50px;
+}
+
+
+body{
+    background-image: url(../../assets/images/Visecure2.png);
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+}
+
+
+.btnAnswerForm {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #007AFF;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #007AFF;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.btnAnswerForm:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.GreetingForm{
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    color: black;
+    width: 45%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    border: 1px solid;
+    justify-content: center;
+
+    h1{
+        font-size: 40px;
+        font-weight: 800;
+        font-family: 'Inter', sans-serif;
+        margin-top: 20px;
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+        margin-top: 20px;
+    }
+}
+}
+ 
+
