@@ -6,17 +6,19 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     
+    
 }
 
 html, body {
-  height: 100%;
-  overflow: hidden;
-  margin: 0;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
 }
 
 body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -45,8 +47,73 @@ body {
         }
 
         ul li:hover{
+            transition: 0.125s ease-in-out;
+            padding-left: 15px;
             background-color: #808080;
+            
         } 
+    }
+
+
+
+
+    .CompanyLogo{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: 20px;
+        padding: 10px 10px;
+        padding: 10px 10px;
+        border-bottom: 1px solid white;
+        overflow: hidden;
+
+            .icon{
+                width: 70px;
+                height: 70px;
+            }
+    }
+
+    }
+
+
+    .CompanyLogo h3{
+        color: white;
+        margin-left: 30px;
+    }
+
+    ul{
+        list-style: none;
+
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 40px 0;
+            cursor: pointer;
+            
+
+            img{
+                width: 50px;
+                height: 50px;
+                margin-left: 15px;
+                margin-right: 20px;
+            }
+
+
+            p{
+                color: #9E9E9E;
+                font-weight: 600;
+                font-size: 20px;
+                white-space: nowrap;
+                display: none;
+            }
+        }
+    }
+
+
+    .LogOut{
+        margin-top: auto;
+        margin-top: auto;
     }
 }
 
@@ -68,65 +135,13 @@ body {
     .EmployeeList {
         margin-right: 175px;
     }
+    justify-content: flex-start;
+
 }
-
-
-.CompanyLogo{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    font-size: 20px;
-    padding: 10px 10px;
-    border-bottom: 1px solid white;
-    overflow: hidden;
-
-    .icon{
-        width: 70px;
-        height: 70px;
-    }
-}
-
-
-.CompanyLogo h3{
-    color: white;
-    margin-left: 30px;
-}
-
-ul{
-    list-style: none;
-    padding: 0 15px;
-
-    li{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 0 15px;
-        margin: 40px 0;
-        cursor: pointer;
-
-        img{
-            width: 30px;
-            height: 30px;
-            margin-right: 20px;
-        }
-
-        p{
-            color: #9E9E9E;
-            font-weight: 600;
-            font-size: 20px;
-            white-space: nowrap;
-            display: none;
-        }
-    }
-}
-
-.LogOut{
-    margin-top: auto;
-}
-
 
 .DashboardContent{
     position: relative;
+    min-height: 100vh;
     min-height: 100vh;
     top: 0;
     left: 75px; 
@@ -143,110 +158,112 @@ ul{
     }
     
     
+    
+    
     .dashboard-container {
-        width: 100vw;
-        height: 100vh;
-        overflow-x: auto; 
-        display: flex;
-        flex-direction: column;
-
-        .small-container {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            
-        }
-        .TodayVisits, .WeeklyVisits, .TotalVisits {
-            width: 25vw;
-            height: 22vh;
-            padding: 20px;
-            margin: 10px;
-            background-color: white;
-            border: 1px solid black;
-            border-radius: 10px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.48); 
+            width: 100vw;
+            height: 100vh;
+            overflow-x: auto; 
             display: flex;
             flex-direction: column;
-            color: #0A0505;
-            font-family: "Inter", sans-serif;
-            gap: 30px;
 
-            .h2{
-                font-size: 45px;
-                font-weight: 600;
-            }
-            .numberOfVisitorsHeader{
+            .small-container {
+                margin-top: 20px;
                 display: flex;
                 flex-direction: row;
-                font-size: 50px;
-                font-weight: 700;
-                justify-content: space-between;
-
-                img{
-                    width: 4vw;
-                    height: 7vh;
-                }
-            }
-        }
-        
-        .TodayVisits{
-            margin-left: 125px;
-        }
-        
-        .TotalVisits{
-            margin-right: 125px;
-        }
-    }
-    
-    .DashboardInsights{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        .Graphs{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-            margin-left: 115px;
-
-            .WeeklyVisitsGraph, .MonthlyVisitsGraph{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                min-width: 45vw;
-                min-height: 40vh;
+                justify-content: space-between;
+                gap: 40px;
+            }
+
+            .TodayVisits, .WeeklyVisits, .TotalVisits {
+                width: 25vw;
+                height: 22vh;
                 padding: 20px;
                 margin: 10px;
-                margin-bottom: 30px;
                 background-color: white;
                 border: 1px solid black;
                 border-radius: 10px;
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.48); 
+                display: flex;
+                flex-direction: column;
+                color: #0A0505;
+                font-family: "Inter", sans-serif;
+                gap: 30px;
+
+                .h2{
+                    font-size: 45px;
+                    font-weight: 600;
+                }
+                .numberOfVisitorsHeader{
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 50px;
+                    font-weight: 700;
+                    justify-content: space-between;
+
+                    img{
+                        width: 4vw;
+                        height: 7vh;
+                    }
+                }
             }
             
+            .TodayVisits{
+                margin-left: 125px;
+            }
+            
+            .TotalVisits{
+                margin-right: 125px;
+            }
         }
         
-        .EmployeeList{
-            width: 40vw;
-            height: 50vh;
-            padding: 20px;
-            margin: 10px;
-            background-color: white;
-            border: 1px solid black;
-            border-radius: 10px;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.48); 
-            margin-right: auto;
-            .h2{
-                font-size: 45px;
-                font-weight: 600;
+        .DashboardInsights{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .Graphs{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+                margin-left: 115px;
+
+                .WeeklyVisitsGraph, .MonthlyVisitsGraph{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    min-width: 45vw;
+                    min-height: 25vh;
+                    padding: 20px;
+                    margin: 10px;
+                    background-color: white;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.48); 
+                }
+                
+            }
+            
+            .EmployeeList{
+                width: 40vw;
+                height: 50vh;
+                padding: 20px;
+                margin-top: 50px;
+                margin-left: 20px;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 10px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.48); 
+                margin-right: auto;
+
+                .h2{
+                    font-size: 45px;
+                    font-weight: 600;
+                }
             }
         }
     }
-}
-}

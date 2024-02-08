@@ -35,6 +35,8 @@ const VisitorCounter = ({ numberOfVisitors, context }) => {
   );
 };
 
+
+
 const Dashboard = () => {
   const [isSideNavHovered, setIsSideNavHovered] = useState(false);
   const [visited, setVisited] = useState(false);
@@ -136,7 +138,7 @@ const Dashboard = () => {
           </div>
           <div className="DashboardInsights">
             <div className="Graphs">
-              <div className="WeeklyVisitsGraph"></div>
+              {/* <div className="WeeklyVisitsGraph"></div> */}
               <div ref={monthlyVisitsGraphRef} className="MonthlyVisitsGraph"></div>
             </div>
             <div className="EmployeeList">
